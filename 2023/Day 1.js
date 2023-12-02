@@ -59,5 +59,5 @@ for (var a = 0; a < input.length; a++) {
 }
 
 console.log("----- OUTPUT -----");
-console.log("Part 1: " + part1Output.reduce((a, b) => a + b));
-console.log("Part 2: " + part2Output.reduce((a, b) => a + b));
+console.log("Part 1:", part1Output.reduce((a, b) => a + b));
+console.log("Part 2:", part2Output.reduce((a, b) => a + b));
