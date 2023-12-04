@@ -1,7 +1,7 @@
 //---> prevents debug menu closing when code finishes
 process.stdin.resume();
 
-//---> opens the file 'cur input"
+//---> opens the file "cur input"
 const fs = require('fs');
 try {
   const data = fs.readFileSync('\cur input.txt', 'utf8');
