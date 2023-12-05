@@ -63,7 +63,7 @@ function mapRanges(ranges) {
       }
     }
   }
-  return ranges[0][0]
+  return ranges[0][0];
 }
 
 var part1 = seeds.map(x => [x, x]);
