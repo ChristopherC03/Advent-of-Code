@@ -23,7 +23,7 @@ for (var a = 0; a < part1[0].length; a++) {
 //the quantity of possible solves is equal to the quantity of integers between the roots (inclusive).
 function solveQuadratic(time, dist) {
   let quadratic = [time / 2, Math.sqrt(Math.pow(time, 2) - (4 * dist)) / 2];
-  quadratic = [Math.ceil(quadratic[0] - quadratic[1]), Math.floor(quadratic[0] + quadratic[1])];
+  quadratic = [Math.floor((quadratic[0] - quadratic[1]) + 1), Math.ceil((quadratic[0] + quadratic[1]) - 1)];
   return ((quadratic[1] - quadratic[0]) + 1);
 }
 
