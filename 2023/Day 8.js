@@ -37,8 +37,8 @@ while (nodes.length > 0) {
 
 //use the euclidean algorithm to derive greatest common divisor
 function gcd(a, b) {
-	if (b == 0) { return a; }
-	return gcd(b, a % b);
+  if (b == 0) { return a; }
+  return gcd(b, a % b);
 }
 
 //derive least common multiple utilizing greatest common divisor
