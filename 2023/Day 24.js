@@ -101,7 +101,6 @@ for (let a = 0; a < input.length; a++) {
   for (let b = a + 1; b < input.length; b++) {
     let [solved, answers] = check(input[a], input[b]);
     if (answers.every(x => Math.sign(x) != -1) && solved.every(x => 200000000000000 <= x && x <= 400000000000000)) {
-      //console.log(a, b);
       part1++;
     }
   }
