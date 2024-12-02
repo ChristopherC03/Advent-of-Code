@@ -28,8 +28,7 @@ while (input.length > 0) {
   //for each element, remove it and do a safeness check without it
   for (let a = 0; a < cur.length; a++) {
     let updated = cur.filter((_, idx) => idx != a);
-    let safe = isSafe(updated);
-    if (safe) {
+    if (isSafe(updated)) {
       part2++;
       break;
     }
