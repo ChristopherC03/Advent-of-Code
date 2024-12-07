@@ -44,7 +44,7 @@ while (input.length > 0) {
   if (check([...cur], false).includes(expected)) {
     part1.push(expected);
     part2.push(expected);
-  //if it wasn't, try again with the concatination operator
+  //if it wasn't, try again with the concatenation operator
   } else if (check(cur, true).includes(expected)) {
     part2.push(expected);
   }
