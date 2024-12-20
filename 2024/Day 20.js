@@ -50,13 +50,13 @@ for (let a = 0; a < graph.length; a++) {
   let [y1, x1] = graph[a];
   for (let b = a + 1; b < graph.length; b++) {
     let [y2, x2] = graph[b];
-    let saved = b - a;
     let manhattan = Math.abs(y2 - y1) + Math.abs(x2 - x1);
-    if (manhattan <= 20 && saved - manhattan >= 100) {
-      part2++;
-    }
-    if (manhattan <= 2 && saved - manhattan >= 100) {
+    let saved = (b - a) - manhattan;
+    if (saved >= 100 && manhattan <= 2) {
       part1++;
+    }
+    if (saved >= 100 && manhattan <= 20) {
+      part2++;
     }
   }
 }
