@@ -14,14 +14,17 @@ input = input.split(' ');
 var map = {}; //map[0][2] is stone 0 after 2 steps
 
 function recurseStep(stone, steps) {
-  if (steps == 1) {
-    return nextStep(stone).length;
-  }
-
-  if ((map[stone] ?? [])[steps] === undefined) {
+  if (map[stone]?.[steps] === undefined) {
     map[stone] = map[stone] ?? [];
-    map[stone][steps] = nextStep(stone).reduce((a, b) => a + recurseStep(b, steps - 1), 0);
+    if (steps == 1) {
+      //base case
+      map[stone][steps] = nextStep(stone).length;
+    } else {
+      //recurse
+      map[stone][steps] = nextStep(stone).reduce((a, b) => a + recurseStep(b, steps - 1), 0);
+    }
   }
+  
   return map[stone][steps];
 }
 
